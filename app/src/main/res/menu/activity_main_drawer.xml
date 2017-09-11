@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/browse"
+            android:title="Browse" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/search"
+            android:title="Search" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/list"
+            android:title="Order History" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/cart"
+            android:title="Shopping Cart" />
+    </group>
+
+    <item android:title="FAQ">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/contact"
+                android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/forum"
+                android:title="Forum" />
+        </menu>
+    </item>
+
+</menu>
