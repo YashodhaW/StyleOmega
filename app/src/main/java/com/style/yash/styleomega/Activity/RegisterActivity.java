@@ -1,4 +1,4 @@
-package com.style.yash.styleomega;
+package com.style.yash.styleomega.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.style.yash.styleomega.Database.DatabaseHelper;
 import com.style.yash.styleomega.Model.User;
+import com.style.yash.styleomega.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

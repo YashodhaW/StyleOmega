@@ -58,7 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    //123
 
     public boolean checkUser(String email, String password) {
 
@@ -105,5 +104,51 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Inserting Row
         db.insert(TABLE_USER, null, values);
         db.close();
+    }
+
+    public User selectUser(String email) {
+
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * " +
+                "FROM user " +
+                "WHERE user_email = '" + email + "' " +
+                " ";
+
+
+        // query user table with conditions
+        /**
+         * Here query function is used to fetch records from user table this function works like we use sql query.
+         * SQL query equivalent to this query function is
+         * SELECT user_id FROM user WHERE user_email = 'jack@androidtutorialshub.com' AND user_password = 'qwerty';
+         */
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        User user = null;
+
+        if (cursor.moveToFirst()) {
+            user = new User();
+
+            user.setId(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ID)));
+            user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_NAME)));
+            user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USER_EMAIL)));
+            user.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PASSWORD)));
+        }
+        cursor.close();
+        db.close();
+        return user;
+    }
+
+    public void UpdateUserDetails(String cid, String name, String email) {
+        SQLiteDatabase db = getWritableDatabase();
+
+
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_USER_NAME, name);
+        cv.put(COLUMN_USER_EMAIL, email);
+        cv.put(COLUMN_USER_PASSWORD, "t");
+
+        db.update(TABLE_USER, cv, "user_id =" + cid, null);
+
     }
 }
