@@ -15,7 +15,7 @@ import com.style.yash.styleomega.Database.DatabaseHelper;
 import com.style.yash.styleomega.Model.User;
 import com.style.yash.styleomega.R;
 
-public class ManageActivity extends MainActivity implements View.OnClickListener {
+public class ManageUserActivity extends MainActivity implements View.OnClickListener {
 
     DatabaseHelper db;
 
@@ -74,7 +74,7 @@ public class ManageActivity extends MainActivity implements View.OnClickListener
             Toast.makeText(getApplicationContext(), "Updated Successfully!", Toast.LENGTH_LONG).show();
 
             finish();
-            Intent homepage = new Intent(ManageActivity.this, LoginActivity.class);
+            Intent homepage = new Intent(ManageUserActivity.this, LoginActivity.class);
             startActivity(homepage);
 
         }

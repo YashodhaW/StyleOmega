@@ -12,7 +12,7 @@ import com.style.yash.styleomega.Database.DatabaseHelper;
 import com.style.yash.styleomega.Model.User;
 import com.style.yash.styleomega.R;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterUserActivity extends AppCompatActivity {
 
     EditText nameInput, emailInput, passwordInput;
 
@@ -52,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Registered Successfully!", Toast.LENGTH_LONG).show();
 
                 finish();
-                Intent homepage = new Intent(RegisterActivity.this, LoginActivity.class);
+                Intent homepage = new Intent(RegisterUserActivity.this, LoginActivity.class);
                 startActivity(homepage);
 
 
