@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.style.yash.styleomega.Model.Product;
 import com.style.yash.styleomega.Model.User;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -236,15 +237,118 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return productList;
     }
 
+    public Product viewProduct(String id) {
+
+        SQLiteDatabase db = getReadableDatabase();
+        Product product = null;
+
+        String selectItemQuery = "SELECT * FROM " + TABLE_PRODUCT + " WHERE " + COLUMN_PRODUCT_ID + "='" + id + "' ";
+
+        try {
+            Cursor c = db.rawQuery(selectItemQuery, null);
+            if (c.moveToFirst()) {
+                product = new Product();
+                product.setProductId(c.getString(c.getColumnIndex(COLUMN_PRODUCT_ID)));
+                product.setName(c.getString(c.getColumnIndex(COLUMN_PRODUCT_NAME)));
+                product.setPrice(c.getDouble(c.getColumnIndex(COLUMN_PRODUCT_PRICE)));
+                product.setImage(c.getString(c.getColumnIndex(COLUMN_PRODUCT_IMAGE)));
+            }
+        } catch (Exception er) {
+
+
+        }
+
+        return product;
+    }
+
+    /*-----Items------ */
+
+
     public void populatedatabase(SQLiteDatabase db){
 
+            /*-----------------------MENS-------------------- */
 
-        String insert30 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+        String insert1 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
                 COLUMN_PRODUCT_ID + "," +
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('W23','Women Tshirt White',800,'jacket101') ";
-        db.execSQL(insert30);
+                " ) " + " VALUES ('A1','Men Alpkit Hoodie',2500,'M1') ";
+        db.execSQL(insert1);
+
+
+        String insert2 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('A2','Men Black Edge T shirt ',1500,'M2') ";
+        db.execSQL(insert2);
+
+
+        String insert3 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('A3','Men Blue Max Trouser',2000,'M3') ";
+        db.execSQL(insert3);
+
+
+        String insert4 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('A4','Men Box Shorts ',1000,'M4') ";
+        db.execSQL(insert4);
+
+
+        String insert5 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('A5','Men United T shirt',1500,'M5') ";
+        db.execSQL(insert5);
+
+        /*-----------------------WOMENS-------------------- */
+
+        String insert6 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('B6','Women Arm Cut Dress',3000,'W1') ";
+        db.execSQL(insert6);
+
+
+        String insert7 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('B7','Women Red Slack Top',1500,'W2') ";
+        db.execSQL(insert7);
+
+
+        String insert8 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('B8','Women Black Trouser',1250,'W3') ";
+        db.execSQL(insert8);
+
+
+        String insert9 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('B9','Women Ripped Short',1650,'W4') ";
+        db.execSQL(insert9);
+
+
     }
 }

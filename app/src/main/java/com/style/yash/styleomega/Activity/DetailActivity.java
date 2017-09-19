@@ -30,23 +30,23 @@ public class DetailActivity extends MainActivity {
         getLayoutInflater().inflate(R.layout.activity_detail, contentFrameLayout);
 
 
-        String productId = getIntent().getStringExtra(HomeActivity.PRODUCT_ID);
-        Product product = DataProvider.productMap.get(productId);
+//        String productId = getIntent().getStringExtra(HomeActivity.PRODUCT_ID);
+//        Product product = DataProvider.productMap.get(productId);
 
-        TextView tv = (TextView) findViewById(R.id.nameText);
-        tv.setText(product.getName());
-
-        TextView descView = (TextView) findViewById(R.id.descriptionText);
-        descView.setText(product.getDescription());
-
-        NumberFormat formatter = NumberFormat.getCurrencyInstance();
-        String price = formatter.format(product.getPrice());
-        TextView priceText = (TextView) findViewById(R.id.priceText);
-        priceText.setText(price);
-
-        ImageView iv = (ImageView) findViewById(R.id.imageView);
-        Bitmap bitmap = getBitmapFromAsset(product.getProductId());
-        iv.setImageBitmap(bitmap);
+//        TextView tv = (TextView) findViewById(R.id.nameText);
+//        tv.setText(product.getName());
+//
+//        TextView descView = (TextView) findViewById(R.id.descriptionText);
+//        descView.setText(product.getDescription());
+//
+//        NumberFormat formatter = NumberFormat.getCurrencyInstance();
+//        String price = formatter.format(product.getPrice());
+//        TextView priceText = (TextView) findViewById(R.id.priceText);
+//        priceText.setText(price);
+//
+//        ImageView iv = (ImageView) findViewById(R.id.imageView);
+//        Bitmap bitmap = getBitmapFromAsset(product.getProductId());
+//        iv.setImageBitmap(bitmap);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

@@ -41,7 +41,7 @@ public class CategoryActivity extends MainActivity implements View.OnClickListen
         if (v.getId() == R.id.men) {
 
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, HomeActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
             homepage.putExtra("TYPE", "men");
             startActivity(homepage);
 
@@ -49,7 +49,7 @@ public class CategoryActivity extends MainActivity implements View.OnClickListen
 
         else if(v.getId() == R.id.women){
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, HomeActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
             homepage.putExtra("TYPE", "women");
             startActivity(homepage);
         }

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
@@ -37,20 +38,20 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.nav_Home:
-                        Intent main = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        Intent main = new Intent(getApplicationContext(), CategoryActivity.class);
                         startActivity(main);
                         drawerLayout.closeDrawers();
                         break;
 
                     case R.id.nav_Search:
-                        Intent women = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(women);
+/*                        Intent women = new Intent(getApplicationContext(), HomeActivity.class);
+                        startActivity(women);*/
 //                        finish();
                         drawerLayout.closeDrawers();
                         break;
 
                     case R.id.nav_OrderHistory:
-                        Intent men = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        Intent men = new Intent(getApplicationContext(), CategoryActivity.class);
                         startActivity(men);
 //                        finish();
                         drawerLayout.closeDrawers();

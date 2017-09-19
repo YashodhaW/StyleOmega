@@ -19,7 +19,7 @@ public final class DataProvider {
                 "Our cross-back training tank is made from organic cotton with 10% Lycra for form and support, and a flattering feminine cut.",
                 35);
 
-        addProduct("jacket101",
+        addProduct("jacket",
                 "Bamboo thermal ski coat",
                 "You’ll be the most environmentally conscious skier on the slopes - and the most stylish - wearing our fitted bamboo thermal ski coat, made from organic bamboo with recycled plastic down filling.",
                 128);

@@ -66,6 +66,7 @@ public class ManageUserActivity extends MainActivity implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+
         if (v.getId() == R.id.submitbtn) {
             String newName = inputName.getText().toString();
             String newEmail = inputEmail.getText().toString();

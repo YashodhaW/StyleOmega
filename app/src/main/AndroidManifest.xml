@@ -32,9 +32,18 @@
         <activity
             android:name=".Activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.CategoryActivity" />
+        <activity
+            android:name=".Activity.CategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.SearchResults" />
-        <activity android:name=".Activity.ItemDetailActivity" />
+        <activity
+            android:name=".Activity.ItemDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.DisplayActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>
