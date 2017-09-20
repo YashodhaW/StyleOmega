@@ -18,51 +18,47 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
         app:layout_constraintBottom_toBottomOf="@+id/women"
-        app:layout_constraintRight_toRightOf="@+id/boys"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/boys"
-        app:layout_constraintTop_toTopOf="@+id/women"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/women" />
 
     <Button
         android:id="@+id/girls"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Girl's"
-        android:layout_marginEnd="68dp"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="226dp"
-        android:layout_marginRight="68dp" />
+        android:layout_marginStart="27dp"
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView4"
+        android:layout_marginLeft="27dp" />
 
     <Button
         android:id="@+id/boys"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Boy's"
-        android:layout_marginStart="54dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/girls"
-        tools:layout_constraintBaseline_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="54dp" />
+        app:layout_constraintLeft_toLeftOf="@+id/imageView3" />
 
     <Button
         android:id="@+id/women"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Women"
-        tools:layout_constraintTop_creator="1"
+        android:layout_marginEnd="15dp"
         tools:layout_constraintRight_creator="1"
-        app:layout_constraintRight_toRightOf="@+id/girls"
-        android:layout_marginTop="76dp"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/girls"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0" />
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintRight_toRightOf="@+id/imageView2"
+        android:layout_marginBottom="1dp"
+        android:layout_marginRight="15dp" />
 
     <Button
         android:id="@+id/accessories"
@@ -74,8 +70,79 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="124dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        app:srcCompat="@drawable/men"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/men"
+        android:layout_marginTop="33dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="48dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.501" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="37dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/women"
+        android:layout_marginEnd="46dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/women"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="46dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/boy"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="@+id/men"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/men"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/men" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="147dp"
+        android:layout_height="141dp"
+        app:srcCompat="@drawable/girl"
+        android:layout_marginEnd="29dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="29dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="110dp"
+        android:layout_height="61dp"
+        app:srcCompat="@drawable/acce"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/accessories"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="9dp" />
 
 </android.support.constraint.ConstraintLayout>

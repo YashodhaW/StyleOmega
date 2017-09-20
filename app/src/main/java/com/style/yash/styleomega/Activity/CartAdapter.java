@@ -53,6 +53,5 @@ public class CartAdapter extends ArrayAdapter<Cart> {
         return customView;
     }
 
-
 }
 

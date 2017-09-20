@@ -42,15 +42,10 @@ public class ManageUserActivity extends MainActivity implements View.OnClickList
         displayID = (TextView) findViewById(R.id.displayID);
 
         submitbtn.setOnClickListener(this);
-/*
-        displayName = (TextView) findViewById(R.id.displayName);
-        displayEmail = (TextView) findViewById(R.id.displayEmail);
-*/
 
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         String email = preferences.getString("email", "");
-
 
         db = new DatabaseHelper(this);
         User u = db.selectUser(email);
@@ -62,7 +57,6 @@ public class ManageUserActivity extends MainActivity implements View.OnClickList
         id = u.getId();
 
     }
-
 
     @Override
     public void onClick(View v) {

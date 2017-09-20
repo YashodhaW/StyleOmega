@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-      //  setSupportActionBar(toolbar);
+        //  setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -44,16 +44,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.nav_Search:
-/*                        Intent women = new Intent(getApplicationContext(), HomeActivity.class);
-                        startActivity(women);*/
-//                        finish();
+                        Intent search = new Intent(getApplicationContext(), CategoryActivity.class);
+                        startActivity(search);
                         drawerLayout.closeDrawers();
                         break;
 
                     case R.id.nav_OrderHistory:
-                        Intent men = new Intent(getApplicationContext(), CategoryActivity.class);
-                        startActivity(men);
-//                        finish();
+                        Intent history = new Intent(getApplicationContext(), CategoryActivity.class);
+                        startActivity(history);
                         drawerLayout.closeDrawers();
                         break;
 
@@ -68,17 +66,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_Manage:
                         Intent manage = new Intent(getApplicationContext(), ManageUserActivity.class);
                         startActivity(manage);
-//                      finish();
                         drawerLayout.closeDrawers();
                         break;
 
                     case R.id.nav_ContactUs:
                         Intent contact = new Intent(getApplicationContext(), ManageUserActivity.class);
                         startActivity(contact);
-//                        finish();
                         drawerLayout.closeDrawers();
                         break;
-
                 }
                 return false;
             }

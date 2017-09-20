@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".Activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
@@ -34,12 +35,18 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.ProductDetailActivity"
+            android:parentActivityName=".Activity.CategoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.DisplayCategoryActivity"
+            android:parentActivityName=".Activity.CategoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.DisplayCartActivity" />
-        <activity android:name=".Activity.CartAdapter"></activity>
+
+
+        <activity android:name=".Activity.DisplayCartActivity" >
+
+        </activity>
     </application>
+
 
 </manifest>
