@@ -58,9 +58,23 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
 
+                    case R.id.nav_Cart:
+                        Intent shoppinhcart = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        startActivity(shoppinhcart);
+                        finish();
+                        drawerLayout.closeDrawers();
+                        break;
+
                     case R.id.nav_Manage:
-                        Intent manageAccount = new Intent(getApplicationContext(), ManageUserActivity.class);
-                        startActivity(manageAccount);
+                        Intent manage = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        startActivity(manage);
+//                      finish();
+                        drawerLayout.closeDrawers();
+                        break;
+
+                    case R.id.nav_ContactUs:
+                        Intent contact = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        startActivity(contact);
 //                        finish();
                         drawerLayout.closeDrawers();
                         break;

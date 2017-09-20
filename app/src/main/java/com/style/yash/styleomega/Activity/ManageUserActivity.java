@@ -75,7 +75,7 @@ public class ManageUserActivity extends MainActivity implements View.OnClickList
             Toast.makeText(getApplicationContext(), "Updated Successfully!", Toast.LENGTH_LONG).show();
 
             finish();
-            Intent homepage = new Intent(ManageUserActivity.this, LoginActivity.class);
+            Intent homepage = new Intent(ManageUserActivity.this, CategoryActivity.class);
             startActivity(homepage);
 
         }

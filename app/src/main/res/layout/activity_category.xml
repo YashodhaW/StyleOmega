@@ -13,15 +13,16 @@
         android:id="@+id/men"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="37dp"
         android:text="Men's"
-        app:layout_constraintLeft_toLeftOf="parent"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
-        android:layout_marginStart="37dp"
+        android:layout_marginStart="21dp"
         app:layout_constraintBottom_toBottomOf="@+id/women"
         app:layout_constraintTop_toTopOf="@+id/women"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView4"
+        android:layout_marginLeft="21dp" />
 
     <Button
         android:id="@+id/girls"
@@ -30,11 +31,10 @@
         android:text="Girl's"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.528"
+        app:layout_constraintVertical_bias="0.637"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginRight="36dp" />
+        android:layout_marginEnd="19dp"
+        tools:layout_editor_absoluteX="228dp" />
 
     <Button
         android:id="@+id/boys"
@@ -43,24 +43,24 @@
         android:text="Boy's"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528"
-        android:layout_marginStart="45dp"
+        app:layout_constraintVertical_bias="0.637"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="45dp" />
+        app:layout_constraintRight_toLeftOf="@+id/accessories"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/men"
+        app:layout_constraintHorizontal_bias="0.0" />
 
     <Button
         android:id="@+id/women"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Women's"
-        tools:layout_constraintTop_creator="1"
+        android:layout_marginEnd="38dp"
+        android:layout_marginTop="7dp"
+        android:text="Women"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginEnd="43dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="67dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="43dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="228dp" />
 
     <Button
         android:id="@+id/accessories"
@@ -69,9 +69,67 @@
         android:text="Accessories"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintBottom_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="63dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="127dp"
+        android:layout_height="91dp"
+        app:srcCompat="@drawable/women"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        tools:layout_editor_absoluteX="211dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/men"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="33dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="33dp" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="115dp"
+        android:layout_height="103dp"
+        app:srcCompat="@drawable/boy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="7dp"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_editor_absoluteX="33dp"
+        app:layout_constraintVertical_bias="0.443" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="85dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/girl"
+        app:layout_constraintHorizontal_bias="0.762"
+        app:layout_constraintVertical_bias="0.447" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="147dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/acce"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.502" />
+
 </android.support.constraint.ConstraintLayout>

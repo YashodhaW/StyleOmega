@@ -34,6 +34,10 @@ public class CategoryActivity extends MainActivity implements View.OnClickListen
         accessories = (Button) findViewById(R.id.accessories);
 
         men.setOnClickListener(this);
+        women.setOnClickListener(this);
+        boys.setOnClickListener(this);
+        girls.setOnClickListener(this);
+        accessories.setOnClickListener(this);
     }
 
     @Override
@@ -45,13 +49,25 @@ public class CategoryActivity extends MainActivity implements View.OnClickListen
             homepage.putExtra("TYPE", "men");
             startActivity(homepage);
 
-        }
-
-        else if(v.getId() == R.id.women){
+        } else if (v.getId() == R.id.women) {
             finish();
             Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
-            homepage.putExtra("TYPE", "women");
+            homepage.putExtra("TYPE", "ladies");
             startActivity(homepage);
+        } else if (v.getId() == R.id.boys) {
+
+            finish();
+            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            homepage.putExtra("TYPE", "boys");
+            startActivity(homepage);
+
+        } else if (v.getId() == R.id.boys) {
+
+            finish();
+            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            homepage.putExtra("TYPE", "girls");
+            startActivity(homepage);
+
         }
     }
 }

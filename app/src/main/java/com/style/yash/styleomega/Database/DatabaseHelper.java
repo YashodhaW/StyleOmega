@@ -189,7 +189,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /*------------Adding Products------------- */
 
-    public void addProduct (Product product) {
+    public void addProduct(Product product) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
@@ -261,10 +261,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return product;
     }
 
-    /*-----Items------ */
+    /*--------------------------------------Items------------------------------------------ */
 
 
-    public void populatedatabase(SQLiteDatabase db){
+    public void populatedatabase(SQLiteDatabase db) {
 
             /*-----------------------MENS-------------------- */
 
@@ -273,7 +273,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('A1','Men Alpkit Hoodie',2500,'M1') ";
+                " ) " + " VALUES ('A1','Men Alpkit Hoodie',2500,'m1') ";
         db.execSQL(insert1);
 
 
@@ -282,7 +282,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('A2','Men Black Edge T shirt ',1500,'M2') ";
+                " ) " + " VALUES ('A2','Men Black Edge T shirt ',1500,'m2') ";
         db.execSQL(insert2);
 
 
@@ -291,7 +291,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('A3','Men Blue Max Trouser',2000,'M3') ";
+                " ) " + " VALUES ('A3','Men Blue Max Trouser',2000,'m3') ";
         db.execSQL(insert3);
 
 
@@ -300,7 +300,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('A4','Men Box Shorts ',1000,'M4') ";
+                " ) " + " VALUES ('A4','Men Box Shorts ',1000,'m4') ";
         db.execSQL(insert4);
 
 
@@ -309,7 +309,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('A5','Men United T shirt',1500,'M5') ";
+                " ) " + " VALUES ('A5','Men United T shirt',1500,'m5') ";
         db.execSQL(insert5);
 
         /*-----------------------WOMENS-------------------- */
@@ -319,7 +319,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('B6','Women Arm Cut Dress',3000,'W1') ";
+                " ) " + " VALUES ('B6','Ladies Arm Cut Dress',3000,'w1') ";
         db.execSQL(insert6);
 
 
@@ -328,7 +328,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('B7','Women Red Slack Top',1500,'W2') ";
+                " ) " + " VALUES ('B7','Ladies Red Slack Top',1500,'w2') ";
         db.execSQL(insert7);
 
 
@@ -337,7 +337,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('B8','Women Black Trouser',1250,'W3') ";
+                " ) " + " VALUES ('B8','Ladies Black Trouser',1250,'w3') ";
         db.execSQL(insert8);
 
 
@@ -346,8 +346,85 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PRODUCT_NAME + "," +
                 COLUMN_PRODUCT_PRICE + "," +
                 COLUMN_PRODUCT_IMAGE +
-                " ) " + " VALUES ('B9','Women Ripped Short',1650,'W4') ";
+                " ) " + " VALUES ('B9','Ladies Ripped Short',1650,'w4') ";
         db.execSQL(insert9);
+
+        /*-----------------------BOYS-------------------- */
+
+
+        String insert10 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('C10','Boys Bulldozer Shorts',750,'b1') ";
+        db.execSQL(insert10);
+
+
+        String insert11 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('C11','Boys Kit ',2000,'b2') ";
+        db.execSQL(insert11);
+
+
+        String insert12 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('C12','Boys Long Sleeved three color',1000,'b3') ";
+        db.execSQL(insert12);
+
+
+        String insert13 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('C13','Boys Shirt light',700,'b4') ";
+        db.execSQL(insert13);
+
+
+
+        /*-----------------------GIRLS-------------------- */
+
+        String insert14 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('D14','Girls Butterfly Dress',900,'g1') ";
+        db.execSQL(insert14);
+
+
+        String insert15 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('D15','Girls Limited Full dress ',2500,'g2') ";
+        db.execSQL(insert15);
+
+
+        String insert16 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('D16','Girls Mermaid Top',1000,'g3') ";
+        db.execSQL(insert16);
+
+
+        String insert17 = "INSERT INTO " + TABLE_PRODUCT + " ( " +
+                COLUMN_PRODUCT_ID + "," +
+                COLUMN_PRODUCT_NAME + "," +
+                COLUMN_PRODUCT_PRICE + "," +
+                COLUMN_PRODUCT_IMAGE +
+                " ) " + " VALUES ('D17','Girls Shades of Pink trouser',800,'g4') ";
+        db.execSQL(insert17);
 
 
     }

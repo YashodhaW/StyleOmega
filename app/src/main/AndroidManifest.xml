@@ -27,15 +27,11 @@
             android:name=".Activity.ManageUserActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.DetailActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".Activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.CategoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activity.SearchResults" />
         <activity
             android:name=".Activity.ItemDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
