@@ -1,12 +1,10 @@
 package com.style.yash.styleomega.Activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 import com.style.yash.styleomega.R;
 
@@ -45,26 +43,26 @@ public class CategoryActivity extends MainActivity implements View.OnClickListen
         if (v.getId() == R.id.men) {
 
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayCategoryActivity.class);
             homepage.putExtra("TYPE", "men");
             startActivity(homepage);
 
         } else if (v.getId() == R.id.women) {
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayCategoryActivity.class);
             homepage.putExtra("TYPE", "ladies");
             startActivity(homepage);
         } else if (v.getId() == R.id.boys) {
 
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayCategoryActivity.class);
             homepage.putExtra("TYPE", "boys");
             startActivity(homepage);
 
         } else if (v.getId() == R.id.boys) {
 
             finish();
-            Intent homepage = new Intent(CategoryActivity.this, DisplayActivity.class);
+            Intent homepage = new Intent(CategoryActivity.this, DisplayCategoryActivity.class);
             homepage.putExtra("TYPE", "girls");
             startActivity(homepage);
 

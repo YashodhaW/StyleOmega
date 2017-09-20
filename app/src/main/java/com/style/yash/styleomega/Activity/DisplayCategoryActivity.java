@@ -2,7 +2,6 @@ package com.style.yash.styleomega.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -15,22 +14,22 @@ import com.style.yash.styleomega.R;
 
 import java.util.List;
 
-public class DisplayActivity extends MainActivity {
+public class DisplayCategoryActivity extends MainActivity {
 
     List<Product> itemList;
     Context context = this;
     private DatabaseHelper db;
     ProductAdapter adap;
     ListView list;
-    private  String productID;
-    private  String keyword;
+    private String productID;
+    private String keyword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.content_frame);
-        getLayoutInflater().inflate(R.layout.activity_display, contentFrameLayout);
+        getLayoutInflater().inflate(R.layout.activity_display_category, contentFrameLayout);
 
         keyword = getIntent().getStringExtra("TYPE");
 
@@ -49,13 +48,12 @@ public class DisplayActivity extends MainActivity {
 
                         String itemCode = itemList.get(position).getProductId();
 
-                        Intent intent = new Intent(context, ItemDetailActivity.class);
+                        Intent intent = new Intent(context, ProductDetailActivity.class);
                         intent.putExtra("itemID", itemCode);
                         context.startActivity(intent);
                     }
                 }
         );
-
 
 
     }

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      //  setSupportActionBar(toolbar);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     case R.id.nav_Cart:
-                        Intent shoppinhcart = new Intent(getApplicationContext(), ManageUserActivity.class);
+                        Intent shoppinhcart = new Intent(getApplicationContext(), DisplayCartActivity.class);
                         startActivity(shoppinhcart);
                         finish();
                         drawerLayout.closeDrawers();
@@ -105,17 +105,5 @@ public class MainActivity extends AppCompatActivity {
         //overridePendingTransitionEnter();
     }
 
-    /**
-     * Overrides the pending Activity transition by performing the "Enter" animation.
-     */
-    /*protected void overridePendingTransitionEnter() {
-        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-    }
 
-    *//**
-     * Overrides the pending Activity transition by performing the "Exit" animation.
-     *//*
-    protected void overridePendingTransitionExit() {
-        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
-    }*/
 }

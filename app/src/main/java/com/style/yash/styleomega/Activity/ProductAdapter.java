@@ -20,7 +20,7 @@ class ProductAdapter extends ArrayAdapter<Product>{
     Context context;
 
     public ProductAdapter(@NonNull Context context, List<Product> itemList) {
-        super(context, R.layout.activity_productadapter, itemList);
+        super(context, R.layout.activity_product_adapter, itemList);
         this.itemList = itemList;
         this.context = context;
     }
@@ -29,7 +29,7 @@ class ProductAdapter extends ArrayAdapter<Product>{
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater itemInflater = LayoutInflater.from(getContext()); //context is background information
-        View customView = itemInflater.inflate(R.layout.activity_productadapter, parent, false);
+        View customView = itemInflater.inflate(R.layout.activity_product_adapter, parent, false);
 
         //getting reference
         final String name=itemList.get(position).getName();
@@ -37,7 +37,7 @@ class ProductAdapter extends ArrayAdapter<Product>{
         final String code=itemList.get(position).getProductId();
 
         TextView itemDesc = (TextView)customView.findViewById(R.id.nameText);
-        ImageView itemImage = (ImageView)customView.findViewById(R.id.imageView);
+        ImageView itemImage = (ImageView)customView.findViewById(R.id.image);
         itemDesc.setText(name);
 
         int resId = context.getResources().getIdentifier(image,"drawable",context.getPackageName());

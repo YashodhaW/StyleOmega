@@ -97,4 +97,22 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="26dp" />
 
+    <TextView
+        android:id="@+id/displayPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="359dp" />
+
 </android.support.constraint.ConstraintLayout>

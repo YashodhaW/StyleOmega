@@ -33,13 +33,13 @@
             android:name=".Activity.CategoryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.ItemDetailActivity"
+            android:name=".Activity.ProductDetailActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Activity.DisplayActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:name=".Activity.DisplayCategoryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.DisplayCartActivity" />
+        <activity android:name=".Activity.CartAdapter"></activity>
     </application>
 
 </manifest>
